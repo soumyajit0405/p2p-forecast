@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.energytrade</groupId>
-	<artifactId>EnergyTrade-Orders</artifactId>
+	<artifactId>et-forecast</artifactId>
 	<version>1.0.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>energy trade</name>
 	<description>Energy Trade</description>

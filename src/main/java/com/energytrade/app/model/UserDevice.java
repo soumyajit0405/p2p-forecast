@@ -32,6 +32,28 @@ public class UserDevice implements Serializable {
 
 	@Column(name="device_capacity")
 	private BigDecimal deviceCapacity;
+	
+	@Column(name="forecast_enabled")
+	private String forecastEnabled;
+	
+	@Column(name="data_acquisition_enabled")
+	private String dataAcquistionEnabled;
+
+	public String getForecastEnabled() {
+		return forecastEnabled;
+	}
+
+	public void setForecastEnabled(String forecastEnabled) {
+		this.forecastEnabled = forecastEnabled;
+	}
+
+	public String getDataAcquistionEnabled() {
+		return dataAcquistionEnabled;
+	}
+
+	public void setDataAcquistionEnabled(String dataAcquistionEnabled) {
+		this.dataAcquistionEnabled = dataAcquistionEnabled;
+	}
 
 	private byte softdeleteflag;
 
@@ -54,6 +76,61 @@ public class UserDevice implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="device_type_id")
 	private DevicePl devicePl;
+	
+	@Column(name="meter_id")
+	private int meterId;
+	
+	@Column(name="device_name")
+	private String deviceName;
+	
+	@Column(name="meter_type")
+	private String meterType;
+	
+	@Column(name="meter_model_number")
+	private String meterModelNumber;
+	
+	@Column(name="port_number")
+	private String portNumber;
+
+	public int getMeterId() {
+		return meterId;
+	}
+
+	public String getDeviceName() {
+		return deviceName;
+	}
+
+	public void setDeviceName(String deviceName) {
+		this.deviceName = deviceName;
+	}
+
+	public String getMeterType() {
+		return meterType;
+	}
+
+	public void setMeterType(String meterType) {
+		this.meterType = meterType;
+	}
+
+	public String getMeterModelNumber() {
+		return meterModelNumber;
+	}
+
+	public void setMeterModelNumber(String meterModelNumber) {
+		this.meterModelNumber = meterModelNumber;
+	}
+
+	public String getPortNumber() {
+		return portNumber;
+	}
+
+	public void setPortNumber(String portNumber) {
+		this.portNumber = portNumber;
+	}
+
+	public void setMeterId(int meterId) {
+		this.meterId = meterId;
+	}
 
 	public UserDevice() {
 	}
